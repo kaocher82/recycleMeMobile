@@ -1,17 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
-</ion-content>
+    <ion-navbar color="verdeRM">
+        <ion-title>Escanea el codigo QR</ion-title>
+    </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content padding>
+        <button ion-button (click)="scan()">Abrir camara</button>
+        <div *ngIf="scanData">
+           Escaneado : {{scanData.text}}
+           <!---Texto formateado : {{scanData.format}} -->
+    
+        </div>
+    </ion-content>
